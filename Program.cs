@@ -8,14 +8,17 @@ namespace Vs
     {
         public static void Main(string[] args)
         {
-            Console.WriteLine("Escolha uma opção: 1- Cidades, 2- Paises, 3- Continentes");
+
+           
+
+            Console.WriteLine("Escolha uma opção: 1- Cidades, 2- Paises, 3- Continentes, 0- fechar");
             Console.WriteLine("Digite a opção: ");
             ConsoleKeyInfo input = Console.ReadKey();
             int result = int.Parse(input.KeyChar.ToString());
             Console.WriteLine(input.KeyChar);
             
             
-            if (result == 1){
+            do{ if (result == 1){
                 Console.WriteLine();
                 Console.WriteLine("ESCOLHEU OPÇÃO UM - CIDADES!");
                 Console.WriteLine();
@@ -64,7 +67,10 @@ namespace Vs
                     Environment.Exit(0);
             }
 
-            
+           }while (result == 0);       
+
+
+
 
             
 
