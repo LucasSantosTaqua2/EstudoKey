@@ -8,15 +8,6 @@ namespace Vs
     {
         public static void Main(string[] args)
         {
-            
-           
-
-           /* Console.WriteLine("Escolha uma opção: 1- Cidades, 2- Paises, 3- Continentes, 0- fechar");
-            Console.WriteLine("Digite a opção: ");
-            ConsoleKeyInfo input = Console.ReadKey();
-            int result = int.Parse(input.KeyChar.ToString());*/
-
-            
                 int result = 0;
             
             do
@@ -31,6 +22,22 @@ namespace Vs
             
                 if (result == 1)
                 {
+                    menu1();                   
+                }
+                else if (result == 2)
+                {
+                    menu2();
+                }
+                else if (result == 3)
+                {
+                    menu3();
+                }
+
+            } while (result != 0);
+
+
+
+            static void menu1(){
                     Console.WriteLine();
                     Console.WriteLine("ESCOLHEU OPÇÃO UM - CIDADES!");
                     Console.WriteLine();
@@ -43,10 +50,9 @@ namespace Vs
                     Console.WriteLine("São Petersburgo");
                     Console.WriteLine("Tokyo");
                     Console.WriteLine("________");
-                    
-                    
-                }else if (result == 2)
-                {
+            }
+
+            static void menu2(){
                     Console.WriteLine();
                     Console.WriteLine("ESCOLHEU OPÇÃO DOIS - PAISES!");
                     Console.WriteLine();
@@ -59,8 +65,10 @@ namespace Vs
                     Console.WriteLine("Holanda");
                     Console.WriteLine("Brasil");
                     Console.WriteLine("________");
-                }else if (result == 3)
-                {
+
+            }
+
+            static void menu3(){
                     Console.WriteLine();
                     Console.WriteLine("ESCOLHEU OPÇÃO TRÊS - CONTINENTES!");
                     Console.WriteLine();
@@ -73,13 +81,9 @@ namespace Vs
                     Console.WriteLine("America");
                     Console.WriteLine("Europa");
                     Console.WriteLine("________");
-                }
-
-            } while (result != 0);
+           }
 
 
-
-            
 
         }
     }
